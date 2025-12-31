@@ -1,0 +1,121 @@
+/* Global reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page layout */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+     padding: 30px;
+    color: #333;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.container-fluid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+/* Headings */
+h2 {
+    margin-bottom: 15px;
+    
+}
+
+/* Form container */
+form {
+    background: #ffffff;
+    padding: 20px;
+    max-width: 900px;
+    border-radius: 6px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.726);
+}
+
+/* Labels */
+label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* Inputs */
+textarea,
+select,
+input[type="number"] {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Textarea height */
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* Submit button */
+button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background-color: #4a69bd;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1e3799;
+}
+
+/* Paste list */
+ul {
+    list-style: none;
+    max-width: 700px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.797);
+}
+
+/* Paste list item */
+li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+/* Paste links */
+a {
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+    transition: text-decoration 0.5s ease;
+}
+
+/* Empty state */
+p {
+    font-style: italic;
+    color: #777;
+    margin-top: 10px;
+}

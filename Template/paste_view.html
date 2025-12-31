@@ -1,0 +1,51 @@
+    {% load static %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>View Paste</title>
+        <link rel="stylesheet" href="{% static 'css/paste_view.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+    <div class="box">
+        <h2>Paste Content</h2>
+
+        <div class="container-pre">{{ paste.content_paste }}</div>
+
+       <div class="meta-grid">
+    <p class="meta-item">
+        <strong class="meta-label">Category:</strong>
+        <span class="meta-value">{{ paste.category|default:"Text"|title }}</span>
+    </p>
+    
+    <p class="meta-item">
+        <strong class="meta-label">Views:</strong>
+        <span class="meta-value">
+            {{ paste.views_count }}
+            {% if paste.max_views %}
+                / {{ paste.max_views }}
+            {% endif %}
+        </span>
+    </p>
+    
+    <p class="meta-item">
+        <strong class="meta-label">Expiry:</strong>
+        <span class="meta-value">{{ paste.get_expiry_display }}</span>
+    </p>
+    
+    {% if paste.expires_at %}
+    <p class="meta-item">
+        <strong class="meta-label">Expires at:</strong>
+        <span class="meta-value">{{ paste.expires_at }}</span>
+    </p>
+    {% endif %}
+</div>
+
+        <a href="/">← Back to Home</a>
+    </div>
+
+    </body>
+    </html>
